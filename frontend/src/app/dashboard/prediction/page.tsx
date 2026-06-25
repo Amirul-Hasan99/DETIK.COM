@@ -129,7 +129,7 @@ export default function PredictionPage() {
                   <td className="px-4 py-3 max-w-[300px] truncate">{p.input_text}</td>
                   <td className="px-4 py-3">
                     <span className={`inline-flex px-2.5 py-1 rounded-full text-xs font-semibold ${
-                      { News: "bg-blue-500/10 text-blue-500", Finance: "bg-emerald-500/10 text-emerald-500", Sport: "bg-amber-500/10 text-amber-500", Oto: "bg-violet-500/10 text-violet-500", Health: "bg-rose-500/10 text-rose-500", Travel: "bg-cyan-500/10 text-cyan-500" }[p.predicted_label] || "bg-secondary text-foreground"
+                      ({ News: "bg-blue-500/10 text-blue-500", Finance: "bg-emerald-500/10 text-emerald-500", Sport: "bg-amber-500/10 text-amber-500", Oto: "bg-violet-500/10 text-violet-500", Health: "bg-rose-500/10 text-rose-500", Travel: "bg-cyan-500/10 text-cyan-500" } as Record<string, string>)[p.predicted_label as string] || "bg-secondary text-foreground"
                     }`}>{p.predicted_label}</span>
                   </td>
                   <td className="px-4 py-3 text-center font-mono">{p.confidence ? `${(p.confidence * 100).toFixed(1)}%` : "—"}</td>
