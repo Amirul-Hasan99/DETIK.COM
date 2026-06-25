@@ -20,8 +20,12 @@ echo Melakukan commit...
 git commit -m "%message%"
 
 echo.
-echo Melakukan push ke repository...
+echo Melakukan push ke GitHub repository...
 git push origin main
+
+echo.
+echo Melakukan push ke Hugging Face Space...
+git push huggingface main
 
 echo.
 echo Selesai!
