@@ -24,8 +24,16 @@ echo Melakukan push ke GitHub repository...
 git push origin main
 
 echo.
-echo Melakukan push ke Hugging Face Space...
-git push -f huggingface main
+echo Melakukan push ke Hugging Face Space dengan Git LFS...
+git checkout --orphan hf-deploy
+git lfs install
+git lfs track "*.pkl"
+git lfs track "*.db"
+git add .
+git commit -m "Deploy to Hugging Face"
+git push -f huggingface hf-deploy:main
+git checkout main
+git branch -D hf-deploy
 
 echo.
 echo Selesai!
