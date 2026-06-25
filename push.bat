@@ -25,7 +25,7 @@ git push origin main
 
 echo.
 echo Melakukan push ke Hugging Face Space...
-git push huggingface main
+git push -f huggingface main
 
 echo.
 echo Selesai!
