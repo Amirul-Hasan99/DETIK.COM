@@ -1,3 +1,13 @@
+---
+title: News Mining Analytics
+emoji: 📰
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+app_port: 7860
+---
+
 # News Mining Analytics System
 
 > Indonesian News Classification & Analytics Platform powered by Machine Learning

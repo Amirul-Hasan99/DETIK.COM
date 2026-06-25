@@ -17,8 +17,8 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: str = "HS256"
     JWT_ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440  # 24 hours
 
-    # CORS (You can pass ALLOWED_ORIGINS="https://your-site.netlify.app" in environment variables)
-    CORS_ORIGINS: list[str] = ["http://localhost:3000", "http://127.0.0.1:3000"]
+    # CORS
+    CORS_ORIGINS: list[str] = ["*"]
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
