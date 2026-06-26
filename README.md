@@ -1,11 +1,11 @@
 ---
-title: News Mining Analytics
-emoji: 📰
+title: Backend Big Data
+emoji: 🚀
 colorFrom: blue
 colorTo: indigo
 sdk: docker
+app_file: app.py
 pinned: false
-app_port: 7860
 ---
 
 # News Mining Analytics System
